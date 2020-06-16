@@ -1,0 +1,8 @@
+version: '3'
+services:
+    application:
+        container_name: unit_test_app
+        image: richcongress/php:7.3
+        volumes:
+            - .:/app:rw,cached
+            - ~/.composer:/home/application/.composer:cached
