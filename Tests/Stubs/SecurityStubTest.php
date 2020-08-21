@@ -39,9 +39,11 @@ class SecurityStubTest extends TestCase
     {
         $user = new User();
         $this->security->setUser($user, ['ROLE_MAGIC']);
+        $roles = $this->security->getRoles();
 
         self::assertSame($user, $this->security->getUser());
-        self::assertContains('ROLE_MAGIC', $this->security->getRoleNames());
+        self::assertCount(1, $roles);
+        self::assertEquals('ROLE_MAGIC', $roles[0]->getRole());
     }
 
     /**
@@ -50,8 +52,10 @@ class SecurityStubTest extends TestCase
     public function testSetEmptyUser(): void
     {
         $this->security->setUser(null, ['ROLE_MAGIC']);
+        $roles = $this->security->getRoles();
 
         self::assertNull($this->security->getUser());
-        self::assertContains('ROLE_MAGIC', $this->security->getRoleNames());
+        self::assertCount(1, $roles);
+        self::assertEquals('ROLE_MAGIC', $roles[0]->getRole());
     }
 }

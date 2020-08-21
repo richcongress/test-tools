@@ -41,6 +41,6 @@ class EventDispatcherStubTest extends TestCase
 
         $this->eventDispatcher->dispatch('event', $event);
 
-        self::assertContains($event, $this->eventDispatcher->events);
+        self::assertContainsEquals($event, $this->eventDispatcher->events);
     }
 }

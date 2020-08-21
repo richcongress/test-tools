@@ -57,7 +57,7 @@ class EntityManagerStubTest extends TestCase
         $this->entityManager->persist($entity);
 
         self::assertArrayHasKey(DummyEntity::class, $this->entityManager->persisted);
-        self::assertContains($entity, $this->entityManager->persisted[DummyEntity::class]);
+        self::assertContainsEquals($entity, $this->entityManager->persisted[DummyEntity::class]);
     }
 
     public function testRemove(): void
@@ -68,7 +68,7 @@ class EntityManagerStubTest extends TestCase
         $this->entityManager->remove($entity);
 
         self::assertArrayHasKey(DummyEntity::class, $this->entityManager->deleted);
-        self::assertContains($entity, $this->entityManager->deleted[DummyEntity::class]);
+        self::assertContainsEquals($entity, $this->entityManager->deleted[DummyEntity::class]);
     }
 
     /**

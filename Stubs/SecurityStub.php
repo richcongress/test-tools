@@ -5,6 +5,7 @@ namespace RichCongress\UnitTestBundle\Stubs;
 use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -60,12 +61,12 @@ class SecurityStub extends Security
     }
 
     /**
-     * @return array
+     * @return array|Role[]
      */
-    public function getRoleNames(): array
+    public function getRoles(): array
     {
         return $this->getToken() !== null
-            ? $this->getToken()->getRoleNames()
+            ? $this->getToken()->getRoles()
             : [];
     }
 

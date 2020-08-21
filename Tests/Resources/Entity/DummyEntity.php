@@ -16,6 +16,16 @@ use Doctrine\ORM\Mapping as ORM;
 class DummyEntity extends AbstractDummyEntity
 {
     /**
+     * @var string|null
+     */
+    protected static $staticName;
+
+    /**
+     * @var string|null
+     */
+    protected static $protectedVariable;
+
+    /**
      * @var integer
      *
      * @ORM\Id
@@ -49,7 +59,7 @@ class DummyEntity extends AbstractDummyEntity
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -57,7 +67,7 @@ class DummyEntity extends AbstractDummyEntity
     /**
      * @return string
      */
-    public function getKeyname(): string
+    public function getKeyname(): ?string
     {
         return $this->keyname;
     }
@@ -86,5 +96,27 @@ class DummyEntity extends AbstractDummyEntity
         $entity->keyname = $keyname;
 
         return $entity;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    protected function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    protected static function setStaticName(string $name): void
+    {
+        self::$staticName = $name;
+    }
+
+    public static function getStaticName(): ?string
+    {
+        return static::$staticName;
     }
 }

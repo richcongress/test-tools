@@ -74,8 +74,8 @@ class RepositoryStubTest extends TestCase
         $entityManager->addEntity($entity3);
 
         $results = $this->repository->findBy(['keyname' => 'keyname_1']);
-        self::assertContains($entity1, $results);
-        self::assertNotContains($entity2, $results);
-        self::assertContains($entity3, $results);
+        self::assertContainsEquals($entity1, $results);
+        self::assertNotContainsEquals($entity2, $results);
+        self::assertContainsEquals($entity3, $results);
     }
 }
