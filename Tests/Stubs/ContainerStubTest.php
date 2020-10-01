@@ -3,7 +3,7 @@
 namespace RichCongress\UnitTestBundle\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\ContainerStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\ContainerStub;
 use RichCongress\UnitTestBundle\Tests\Resources\Command\DummyCommand;
 
 /**
@@ -13,7 +13,7 @@ use RichCongress\UnitTestBundle\Tests\Resources\Command\DummyCommand;
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\ContainerStub
+ * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\ContainerStub
  */
 class ContainerStubTest extends TestCase
 {

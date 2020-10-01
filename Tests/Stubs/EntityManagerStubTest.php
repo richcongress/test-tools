@@ -3,8 +3,8 @@
 namespace RichCongress\UnitTestBundle\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\EntityManagerStub;
-use RichCongress\UnitTestBundle\Stubs\RepositoryStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\EntityManagerStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\RepositoryStub;
 use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
 
 /**
@@ -14,7 +14,7 @@ use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\EntityManagerStub
+ * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\EntityManagerStub
  */
 class EntityManagerStubTest extends TestCase
 {

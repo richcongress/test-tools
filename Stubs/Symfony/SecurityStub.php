@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Symfony\Stubs;
+namespace RichCongress\UnitTestBundle\Stubs\Symfony;
 
 use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * Class SecurityStub
  *
- * @package   RichCongress\UnitTestBundle\Symfony\Stubs
+ * @package   RichCongress\UnitTestBundle\Stubs\Symfony
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

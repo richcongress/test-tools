@@ -3,7 +3,7 @@
 namespace RichCongress\UnitTestBundle\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\ValidationContextStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\ValidationContextStub;
 
 /**
  * Class ValidationContextStubTest
@@ -12,7 +12,7 @@ use RichCongress\UnitTestBundle\Stubs\ValidationContextStub;
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\ValidationContextStub
+ * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\ValidationContextStub
  */
 class ValidationContextStubTest extends TestCase
 {
