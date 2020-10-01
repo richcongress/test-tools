@@ -3,7 +3,7 @@
 namespace RichCongress\UnitTestBundle\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\SecurityStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\SecurityStub;
 use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
 
 /**
@@ -13,7 +13,7 @@ use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\SecurityStub
+ * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\SecurityStub
  */
 class SecurityStubTest extends TestCase
 {

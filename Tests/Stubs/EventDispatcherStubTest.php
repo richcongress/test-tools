@@ -3,7 +3,7 @@
 namespace RichCongress\UnitTestBundle\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\EventDispatcherStub;
+use RichCongress\UnitTestBundle\Stubs\Symfony\EventDispatcherStub;
 use RichCongress\UnitTestBundle\Tests\Resources\Event\DummyEvent;
 
 /**
@@ -13,7 +13,7 @@ use RichCongress\UnitTestBundle\Tests\Resources\Event\DummyEvent;
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\EventDispatcherStub
+ * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\EventDispatcherStub
  */
 class EventDispatcherStubTest extends TestCase
 {

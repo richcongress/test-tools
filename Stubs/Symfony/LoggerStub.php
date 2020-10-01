@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs;
+namespace RichCongress\UnitTestBundle\Stubs\Symfony;
 
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 /**
  * Class LoggerStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs
+ * @package   RichCongress\UnitTestBundle\Stubs\Symfony
  * @author    Matthias Devlamynck <mdevlamynck@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */
