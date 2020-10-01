@@ -4,7 +4,7 @@ The RichCongress Template Bundle
 This version of the bundle requires PHP 7.3+.
 
 [![Package version](https://img.shields.io/packagist/v/richcongress/unit-test-bundle)](https://packagist.org/packages/richcongress/unit-test-bundle)
-[![Actions Status](https://github.com/richcongress/unit-test-bundle/workflows/Tests/badge.svg)](https://github.com/t/richcongress/unit-test-bundle/actions)
+[![Actions Status](https://github.com/richcongress/unit-test-bundle/workflows/Tests/badge.svg)](https://github.com/richcongress/unit-test-bundle/actions)
 [![Coverage Status](https://coveralls.io/repos/github/richcongress/unit-test-bundle/badge.svg?branch=master)](https://coveralls.io/github/richcongress/unit-test-bundle?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/unit-test-bundle/maintainability)](https://codeclimate.com/github/richcongress/unit-test-bundle/maintainability)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/richcongress/unit-test-bundle/issues)
