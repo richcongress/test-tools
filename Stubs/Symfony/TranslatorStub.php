@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs;
+namespace RichCongress\UnitTestBundle\Symfony\Stubs;
 
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Class TranslatorStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs
+ * @package   RichCongress\UnitTestBundle\Symfony\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

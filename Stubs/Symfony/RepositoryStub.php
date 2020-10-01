@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs;
+namespace RichCongress\UnitTestBundle\Symfony\Stubs;
 
 use Doctrine\Persistence\ObjectRepository;
 use Symfony\Component\PropertyAccess\PropertyAccess;
@@ -8,7 +8,7 @@ use Symfony\Component\PropertyAccess\PropertyAccess;
 /**
  * Class RepositoryStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs
+ * @package   RichCongress\UnitTestBundle\Symfony\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

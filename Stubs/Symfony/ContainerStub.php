@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs;
+namespace RichCongress\UnitTestBundle\Symfony\Stubs;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 /**
  * Class ContainerStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs
+ * @package   RichCongress\UnitTestBundle\Symfony\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */
