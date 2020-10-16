@@ -1,6 +1,6 @@
 {
-    "name": "richcongress/unit-test-bundle",
-    "description": "This bundle gives a set of tools to test your application with Unit tests.",
+    "name": "richcongress/test-tools",
+    "description": "This library gives a set of tools to test your application with Unit tests.",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RichCongress\\UnitTestBundle\\": ""
+            "RichCongress\\TestTools\\": ""
         },
         "files": [
             "./Helper/GlobalNamespaceHelper.php"
@@ -35,7 +35,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "RichCongress\\UnitTestBundle\\Tests\\": "Tests/"
+            "RichCongress\\TestTools\\Tests\\": "Tests/"
         }
     },
     "config": {

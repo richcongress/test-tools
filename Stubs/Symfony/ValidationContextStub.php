@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs\Symfony;
+namespace RichCongress\TestTools\Stubs\Symfony;
 
 use Symfony\Component\Validator\Context\ExecutionContext;
 use Symfony\Component\Validator\ValidatorBuilder;
@@ -8,7 +8,7 @@ use Symfony\Component\Validator\ValidatorBuilder;
 /**
  * Class ValidationContextStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs\Symfony
+ * @package   RichCongress\TestTools\Stubs\Symfony
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

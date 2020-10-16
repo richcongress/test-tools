@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Resources\Entity;
+namespace RichCongress\TestTools\Tests\Resources\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class DummyEntity
  *
- * @package   RichCongress\UnitTestBundle\Tests\Resources\Entity
+ * @package   RichCongress\TestTools\Tests\Resources\Entity
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2019 RichCongress (https://www.richcongress.com)
  *

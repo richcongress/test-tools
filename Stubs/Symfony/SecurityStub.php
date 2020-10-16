@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Stubs\Symfony;
+namespace RichCongress\TestTools\Stubs\Symfony;
 
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
+use RichCongress\TestTools\Tests\Resources\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\Role\Role;
@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * Class SecurityStub
  *
- * @package   RichCongress\UnitTestBundle\Stubs\Symfony
+ * @package   RichCongress\TestTools\Stubs\Symfony
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

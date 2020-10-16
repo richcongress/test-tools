@@ -1,14 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\TestCase;
+namespace RichCongress\TestTools\TestCase;
 
-use RichCongress\UnitTestBundle\TestTrait\MatchAssertionTrait;
-use RichCongress\UnitTestBundle\TestTrait\SubSetAssertionTrait;
+use RichCongress\TestTools\TestTrait\MatchAssertionTrait;
+use RichCongress\TestTools\TestTrait\SubSetAssertionTrait;
 
 /**
  * Class TestCase
  *
- * @package   RichCongress\UnitTestBundle\TestCase
+ * @package   RichCongress\TestTools\TestCase
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

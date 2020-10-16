@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\TextUi;
+namespace RichCongress\TestTools\TextUi;
 
 /**
  * Class Output
  *
- * @package   RichCongress\UnitTestBundle\TextUi
+ * @package   RichCongress\TestTools\TextUi
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2019 RichCongress (https://www.richcongress.com)
  */

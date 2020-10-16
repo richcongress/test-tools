@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\TestTrait;
+namespace RichCongress\TestTools\TestTrait;
 
 /**
  * Trait SubSetAssertionTrait
  *
- * @package   RichCongress\UnitTestBundle\TestTrait
+ * @package   RichCongress\TestTools\TestTrait
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

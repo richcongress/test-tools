@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Stubs;
+namespace RichCongress\TestTools\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\Symfony\RepositoryStub;
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
+use RichCongress\TestTools\Stubs\Symfony\RepositoryStub;
+use RichCongress\TestTools\Tests\Resources\Entity\DummyEntity;
 
 /**
  * Class RepositoryStubTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\Stubs
+ * @package   RichCongress\TestTools\Tests\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\RepositoryStub
+ * @covers \RichCongress\TestTools\Stubs\Symfony\RepositoryStub
  */
 class RepositoryStubTest extends TestCase
 {

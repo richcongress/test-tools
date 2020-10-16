@@ -1,14 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Helper;
+namespace RichCongress\TestTools\Tests\Helper;
 
-use RichCongress\UnitTestBundle\TestCase\TestCase;
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
+use RichCongress\TestTools\TestCase\TestCase;
+use RichCongress\TestTools\Tests\Resources\Entity\DummyEntity;
 
 /**
  * Class GlobalNamespaceHelperTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\Helper
+ * @package   RichCongress\TestTools\Tests\Helper
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
@@ -26,7 +26,7 @@ class GlobalNamespaceHelperTest extends TestCase
 
     public function testDebugWithObjectValueWithoutVerbose(): void
     {
-        $this->expectOutputString('Object of class RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity');
+        $this->expectOutputString('Object of class RichCongress\TestTools\Tests\Resources\Entity\DummyEntity');
 
         \debug(new DummyEntity());
     }

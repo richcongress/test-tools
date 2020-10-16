@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Stubs;
+namespace RichCongress\TestTools\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\Symfony\SecurityStub;
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\User;
+use RichCongress\TestTools\Stubs\Symfony\SecurityStub;
+use RichCongress\TestTools\Tests\Resources\Entity\User;
 
 /**
  * Class SecurityStubTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\Stubs
+ * @package   RichCongress\TestTools\Tests\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\SecurityStub
+ * @covers \RichCongress\TestTools\Stubs\Symfony\SecurityStub
  */
 class SecurityStubTest extends TestCase
 {

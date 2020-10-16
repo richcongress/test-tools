@@ -1,26 +1,26 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Helper;
+namespace RichCongress\TestTools\Tests\Helper;
 
-use RichCongress\UnitTestBundle\Helper\ForceExecutionHelper;
-use RichCongress\UnitTestBundle\TestCase\TestCase;
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
+use RichCongress\TestTools\Helper\ForceExecutionHelper;
+use RichCongress\TestTools\TestCase\TestCase;
+use RichCongress\TestTools\Tests\Resources\Entity\DummyEntity;
 
 /**
  * Class ForceExecutionHelperTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\Helper
+ * @package   RichCongress\TestTools\Tests\Helper
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Helper\ForceExecutionHelper
+ * @covers \RichCongress\TestTools\Helper\ForceExecutionHelper
  */
 class ForceExecutionHelperTest extends TestCase
 {
     public function testCannotInstanciateHelper(): void
     {
         $this->expectException(\Error::class);
-        $this->expectExceptionMessage('Call to private RichCongress\UnitTestBundle\Helper\ForceExecutionHelper::__construct()');
+        $this->expectExceptionMessage('Call to private RichCongress\TestTools\Helper\ForceExecutionHelper::__construct()');
 
         new ForceExecutionHelper();
     }

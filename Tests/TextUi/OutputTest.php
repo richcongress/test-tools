@@ -1,18 +1,18 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\TextUi;
+namespace RichCongress\TestTools\Tests\TextUi;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\TextUi\Output;
+use RichCongress\TestTools\TextUi\Output;
 
 /**
  * Class OutputTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\TextUi
+ * @package   RichCongress\TestTools\Tests\TextUi
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2019 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\TextUi\Output
+ * @covers \RichCongress\TestTools\TextUi\Output
  */
 class OutputTest extends TestCase
 {

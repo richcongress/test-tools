@@ -1,20 +1,20 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\TestTrait;
+namespace RichCongress\TestTools\Tests\TestTrait;
 
-use RichCongress\UnitTestBundle\TestCase\TestCase;
-use RichCongress\UnitTestBundle\Tests\Resources\Entity\DummyEntity;
-use RichCongress\UnitTestBundle\TestTrait\Assertion\Parameter;
+use RichCongress\TestTools\TestCase\TestCase;
+use RichCongress\TestTools\Tests\Resources\Entity\DummyEntity;
+use RichCongress\TestTools\TestTrait\Assertion\Parameter;
 
 /**
  * Class MatchAssertionTraitTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\TestTrait
+ * @package   RichCongress\TestTools\Tests\TestTrait
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\TestTrait\MatchAssertionTrait
- * @covers \RichCongress\UnitTestBundle\TestTrait\Assertion\Parameter
+ * @covers \RichCongress\TestTools\TestTrait\MatchAssertionTrait
+ * @covers \RichCongress\TestTools\TestTrait\Assertion\Parameter
  */
 class MatchAssertionTraitTest extends TestCase
 {

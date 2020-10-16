@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\TestTrait\Assertion;
+namespace RichCongress\TestTools\TestTrait\Assertion;
 
 /**
  * Class Parameter
  *
- * @package   RichCongress\UnitTestBundle\TestTrait\Assertion
+ * @package   RichCongress\TestTools\TestTrait\Assertion
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

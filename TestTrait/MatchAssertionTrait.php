@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\TestTrait;
+namespace RichCongress\TestTools\TestTrait;
 
-use RichCongress\UnitTestBundle\TestTrait\Assertion\Parameter;
+use RichCongress\TestTools\TestTrait\Assertion\Parameter;
 
 /**
  * Trait MatchAssertionTrait
  *
- * @package   RichCongress\UnitTestBundle\TestTrait
+ * @package   RichCongress\TestTools\TestTrait
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

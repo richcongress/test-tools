@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Helper;
+namespace RichCongress\TestTools\Helper;
 
 /**
  * Class ForceExecutionHelper
  *
- * @package   RichCongress\UnitTestBundle\Helper
+ * @package   RichCongress\TestTools\Helper
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  */

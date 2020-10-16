@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\TestTrait;
+namespace RichCongress\TestTools\Tests\TestTrait;
 
 use PHPUnit\Framework\ExpectationFailedException;
-use RichCongress\UnitTestBundle\TestCase\TestCase;
+use RichCongress\TestTools\TestCase\TestCase;
 
 /**
  * Class SubSetAssertionTraitTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\TestTrait
+ * @package   RichCongress\TestTools\Tests\TestTrait
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\TestTrait\SubSetAssertionTrait
- * @covers \RichCongress\UnitTestBundle\TestTrait\Assertion\Parameter
+ * @covers \RichCongress\TestTools\TestTrait\SubSetAssertionTrait
+ * @covers \RichCongress\TestTools\TestTrait\Assertion\Parameter
  */
 class SubSetAssertionTraitTest extends TestCase
 {

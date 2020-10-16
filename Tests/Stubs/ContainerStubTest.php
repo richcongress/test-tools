@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace RichCongress\UnitTestBundle\Tests\Stubs;
+namespace RichCongress\TestTools\Tests\Stubs;
 
 use PHPUnit\Framework\TestCase;
-use RichCongress\UnitTestBundle\Stubs\Symfony\ContainerStub;
-use RichCongress\UnitTestBundle\Tests\Resources\Command\DummyCommand;
+use RichCongress\TestTools\Stubs\Symfony\ContainerStub;
+use RichCongress\TestTools\Tests\Resources\Command\DummyCommand;
 
 /**
  * Class ContainerStubTest
  *
- * @package   RichCongress\UnitTestBundle\Tests\Stubs
+ * @package   RichCongress\TestTools\Tests\Stubs
  * @author    Nicolas Guilloux <nguilloux@richcongress.com>
  * @copyright 2014 - 2020 RichCongress (https://www.richcongress.com)
  *
- * @covers \RichCongress\UnitTestBundle\Stubs\Symfony\ContainerStub
+ * @covers \RichCongress\TestTools\Stubs\Symfony\ContainerStub
  */
 class ContainerStubTest extends TestCase
 {
