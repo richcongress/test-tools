@@ -67,12 +67,14 @@ final class ForcePropertyAccessor implements PropertyAccessorInterface
 
     public function isWritable($objectOrArray, $propertyPath): bool
     {
-        return true;
+        return $this->innerPropertyAccessor->isWritable($objectOrArray, $propertyPath)
+            || $this->getPropertyReflection($objectOrArray, $propertyPath) !== null;
     }
 
     public function isReadable($objectOrArray, $propertyPath): bool
     {
-        return true;
+        return $this->innerPropertyAccessor->isReadable($objectOrArray, $propertyPath)
+            || $this->getPropertyReflection($objectOrArray, $propertyPath) !== null;
     }
 
     private function getPropertyReflection($objectOrArray, string $propertyPath): ?\ReflectionProperty

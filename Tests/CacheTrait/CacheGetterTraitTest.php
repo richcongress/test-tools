@@ -54,7 +54,6 @@ final class CacheGetterTraitTest extends TestCase
         $this->getNotExistingProperty();
     }
 
-
     public function testCallLoop(): void
     {
         $this->expectException(\BadMethodCallException::class);

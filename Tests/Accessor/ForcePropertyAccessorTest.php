@@ -28,8 +28,9 @@ final class ForcePropertyAccessorTest extends TestCase
 
     public function testIsWritableAndReadable(): void
     {
-        self::assertTrue($this->propertyAccessor->isReadable([], ''));
-        self::assertTrue($this->propertyAccessor->isWritable([], ''));
+        $object = new DummyEntity();
+        self::assertTrue($this->propertyAccessor->isReadable($object, 'privateVariable'));
+        self::assertTrue($this->propertyAccessor->isWritable($object, 'privateVariable'));
     }
 
     public function testSetValueForArray(): void
