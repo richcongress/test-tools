@@ -48,6 +48,8 @@ class DummyEntity extends AbstractDummyEntity
      */
     protected $keyname;
 
+    private $privateVariable;
+
     /**
      * @return integer|null
      */

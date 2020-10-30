@@ -12,6 +12,7 @@
 /phpunit-*.xml
 /phpunit-filter.php
 /.phpunit
+/coverage
 
 # Auto-saved files
 *~

@@ -2,6 +2,7 @@
 
 namespace RichCongress\TestTools\Tests\TestTrait;
 
+use RichCongress\TestTools\Accessor\ForcePropertyAccessor;
 use RichCongress\TestTools\TestCase\TestCase;
 use RichCongress\TestTools\Tests\Resources\Entity\DummyEntity;
 use RichCongress\TestTools\TestTrait\Assertion\Parameter;
@@ -49,5 +50,27 @@ class MatchAssertionTraitTest extends TestCase
         ];
 
         self::assertMatch($expected, $tested);
+    }
+
+    public function testForObject(): void
+    {
+        $accessor = new ForcePropertyAccessor();
+        $object = new DummyEntity();
+        $accessor->setValue($object, 'id', 1);
+        $accessor->setValue($object, 'name', 'Name');
+        $accessor->setValue($object, 'keyname', 'keyname');
+        $accessor->setValue($object, 'privateVariable', ['test']);
+
+        self::assertMatch(
+            [
+                'id' => 1,
+                'name' => 'Name',
+                'keyname' => Parameter::string(),
+                'privateVariable' => [
+                    Parameter::string(),
+                ],
+            ],
+            $object
+        );
     }
 }
