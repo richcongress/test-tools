@@ -23,7 +23,7 @@ trait CachedGetterTrait
     public function __call(string $method, array $arguments)
     {
         return self::getObject(
-            self::$staticCacheGetters,
+            $this->cacheGetters,
             $method,
             function (string $factory) use ($arguments) {
                 return $this->$factory(...$arguments);

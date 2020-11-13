@@ -5,6 +5,7 @@ namespace RichCongress\TestTools\Accessor;
 use Symfony\Component\PropertyAccess\Exception;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
+use Symfony\Component\PropertyAccess\PropertyPathInterface;
 
 /**
  * Class ForcePropertyAccessor
@@ -15,20 +16,25 @@ use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
  */
 final class ForcePropertyAccessor implements PropertyAccessorInterface
 {
-    /** @var PropertyAccessorInterface|null */
+    /** @var PropertyAccessorInterface */
     private $innerPropertyAccessor;
 
     public function __construct(PropertyAccessorInterface $propertyAccessor = null)
     {
-        $this->innerPropertyAccessor = $propertyAccessor;
-
-        if ($this->innerPropertyAccessor === null) {
+        if ($propertyAccessor === null) {
             $this->innerPropertyAccessor = PropertyAccess::createPropertyAccessorBuilder()
                 ->enableMagicCall()
                 ->getPropertyAccessor();
+        } else {
+            $this->innerPropertyAccessor = $propertyAccessor;
         }
     }
 
+    /**
+     * @param array|object|mixed                  $objectOrArray
+     * @param string|PropertyPathInterface<mixed> $propertyPath
+     * @param mixed                               $value
+     */
     public function setValue(&$objectOrArray, $propertyPath, $value): void
     {
         try {
@@ -46,6 +52,12 @@ final class ForcePropertyAccessor implements PropertyAccessorInterface
         }
     }
 
+    /**
+     * @param array|object|mixed                  $objectOrArray
+     * @param string|PropertyPathInterface<mixed> $propertyPath
+     *
+     * @return mixed|null
+     */
     public function getValue($objectOrArray, $propertyPath)
     {
         try {
@@ -65,19 +77,31 @@ final class ForcePropertyAccessor implements PropertyAccessorInterface
         }
     }
 
+    /**
+     * @param array|object|mixed                  $objectOrArray
+     * @param string|PropertyPathInterface<mixed> $propertyPath
+     */
     public function isWritable($objectOrArray, $propertyPath): bool
     {
         return $this->innerPropertyAccessor->isWritable($objectOrArray, $propertyPath)
             || $this->getPropertyReflection($objectOrArray, $propertyPath) !== null;
     }
 
+    /**
+     * @param array|object|mixed                  $objectOrArray
+     * @param string|PropertyPathInterface<mixed> $propertyPath
+     */
     public function isReadable($objectOrArray, $propertyPath): bool
     {
         return $this->innerPropertyAccessor->isReadable($objectOrArray, $propertyPath)
             || $this->getPropertyReflection($objectOrArray, $propertyPath) !== null;
     }
 
-    private function getPropertyReflection($objectOrArray, string $propertyPath): ?\ReflectionProperty
+    /**
+     * @param array|object|mixed                  $objectOrArray
+     * @param string|PropertyPathInterface<mixed> $propertyPath
+     */
+    private function getPropertyReflection($objectOrArray, $propertyPath): ?\ReflectionProperty
     {
         if (!is_object($objectOrArray)) {
             return null;
@@ -86,8 +110,8 @@ final class ForcePropertyAccessor implements PropertyAccessorInterface
         $reflectionClass = new \ReflectionClass($objectOrArray);
 
         while ($reflectionClass instanceof \ReflectionClass) {
-            if ($reflectionClass->hasProperty($propertyPath)) {
-                return $reflectionClass->getProperty($propertyPath);
+            if ($reflectionClass->hasProperty((string)$propertyPath)) {
+                return $reflectionClass->getProperty((string)$propertyPath);
             }
 
             $reflectionClass = $reflectionClass->getParentClass();
