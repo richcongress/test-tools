@@ -31,18 +31,9 @@ class ForceExecutionHelper
     {
         $reflectionMethod = static::getReflectionMethod($object, $method);
         $reflectionMethod->setAccessible(true);
-
-        if ($reflectionMethod->isStatic()) {
-            $value = $reflectionMethod->invoke(null, (array) $args);
-        } else {
-            if (!is_object($object)) {
-                throw new \LogicException(
-                    sprintf('Cannot invoke the method "%s" without having an object', $method)
-                );
-            }
-
-            $value = $reflectionMethod->invoke($object, (array) $args);
-        }
+        $value = $reflectionMethod->isStatic()
+            ? $reflectionMethod->invoke(null, ...$args)
+            : $reflectionMethod->invoke($object, ...$args);
 
         $reflectionMethod->setAccessible(false);
 
@@ -57,18 +48,9 @@ class ForceExecutionHelper
     {
         $reflectionProperty = static::getReflectionProperty($object, $propertyName);
         $reflectionProperty->setAccessible(true);
-
-        if ($reflectionProperty->isStatic()) {
-            $reflectionProperty->setValue(null, $value);
-        } else {
-            if (!is_object($object)) {
-                throw new \LogicException(
-                    sprintf('Cannot the property "%s" without having an object', $propertyName)
-                );
-            }
-
-            $reflectionProperty->setValue($object, $value);
-        }
+        $reflectionProperty->isStatic()
+            ? $reflectionProperty->setValue(null, $value)
+            : $reflectionProperty->setValue($object, $value);
 
         $reflectionProperty->setAccessible(false);
     }

@@ -28,7 +28,7 @@ class ForceExecutionHelperTest extends TestCase
     public function testExecuteMethod(): void
     {
         $object = new DummyEntity();
-        $returned = ForceExecutionHelper::executeMethod($object, 'setName', ['ThisIsATest']);
+        $returned = ForceExecutionHelper::executeMethod($object, 'setName', 'ThisIsATest');
 
         self::assertSame($object, $returned);
         self::assertEquals('ThisIsATest', $object->getName());
@@ -39,20 +39,20 @@ class ForceExecutionHelperTest extends TestCase
         $this->expectException(\LogicException::class);
         $this->expectExceptionMessage('Cannot call a non static method without the instanciated object for ' . DummyEntity::class);
 
-        ForceExecutionHelper::executeMethod(DummyEntity::class, 'setName', ['ThisIsATest']);
+        ForceExecutionHelper::executeMethod(DummyEntity::class, 'setName', 'ThisIsATest');
     }
 
     public function testExecuteStaticMethodWithInstanciatedObject(): void
     {
         $object = new DummyEntity();
-        ForceExecutionHelper::executeMethod($object, 'setStaticName', ['ThisIsATest']);
+        ForceExecutionHelper::executeMethod($object, 'setStaticName', 'ThisIsATest');
 
         self::assertEquals('ThisIsATest', DummyEntity::getStaticName());
     }
 
     public function testExecuteStaticMethodWithClassName(): void
     {
-        ForceExecutionHelper::executeMethod(DummyEntity::class, 'setStaticName', ['ThisIsATest']);
+        ForceExecutionHelper::executeMethod(DummyEntity::class, 'setStaticName', 'ThisIsATest');
 
         self::assertEquals('ThisIsATest', DummyEntity::getStaticName());
     }

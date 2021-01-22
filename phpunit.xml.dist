@@ -36,6 +36,7 @@
                 <directory>var</directory>
                 <directory>vendor</directory>
                 <file>phpunit-filter.php</file>
+                <file>phpinsights.php</file>
                 <file>RichCongressUnitBundle.php</file>
             </exclude>
         </whitelist>

@@ -2,6 +2,7 @@
 
 namespace RichCongress\TestTools\TestCase;
 
+use RichCongress\TestTools\TestTrait\BeforeAndAfterTestTrait;
 use RichCongress\TestTools\TestTrait\MatchAssertionTrait;
 use RichCongress\TestTools\TestTrait\SubSetAssertionTrait;
 
@@ -14,6 +15,7 @@ use RichCongress\TestTools\TestTrait\SubSetAssertionTrait;
  */
 class TestCase extends \PHPUnit\Framework\TestCase
 {
+    use BeforeAndAfterTestTrait;
     use MatchAssertionTrait;
     use SubSetAssertionTrait;
 }
