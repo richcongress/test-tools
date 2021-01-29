@@ -11,19 +11,17 @@ namespace RichCongress\TestTools\TestTrait;
  */
 trait BeforeAndAfterTestTrait
 {
-    /** @var bool */
-    protected static $holdBeforeTest = false;
-
-    /** @var bool */
-    protected static $holdAfterTest = false;
-
     public function setUp(): void
     {
         parent::setUp();
 
-        if (!static::$holdBeforeTest) {
-            $this->beforeTest();
-        }
+        $this->setUpTestCase();
+        $this->beforeTest();
+    }
+
+    protected function setUpTestCase(): void
+    {
+        // Override this to execute code before each test (reserved to TestCase)
     }
 
     protected function beforeTest(): void
@@ -33,11 +31,15 @@ trait BeforeAndAfterTestTrait
 
     public function tearDown(): void
     {
-        if (!static::$holdAfterTest) {
-            $this->afterTest();
-        }
+        $this->afterTest();
+        $this->tearDownTestCase();
 
         parent::tearDown();
+    }
+
+    protected function tearDownTestCase(): void
+    {
+        // Override this to execute code after each test (reserved to TestCase)
     }
 
     protected function afterTest(): void
