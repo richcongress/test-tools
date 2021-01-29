@@ -34,3 +34,4 @@ final class BeforeAndAfterTestTraitTest extends TestCase
         self::assertTrue($testCase->afterTestExecuted);
     }
 }
+

@@ -11,11 +11,19 @@ namespace RichCongress\TestTools\TestTrait;
  */
 trait BeforeAndAfterTestTrait
 {
+    /** @var bool */
+    protected static $holdBeforeTest = false;
+
+    /** @var bool */
+    protected static $holdAfterTest = false;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->beforeTest();
+        if (!static::$holdBeforeTest) {
+            $this->beforeTest();
+        }
     }
 
     protected function beforeTest(): void
@@ -25,7 +33,9 @@ trait BeforeAndAfterTestTrait
 
     public function tearDown(): void
     {
-        $this->afterTest();
+        if (!static::$holdAfterTest) {
+            $this->afterTest();
+        }
 
         parent::tearDown();
     }
